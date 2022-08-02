@@ -26,10 +26,7 @@ public class Dev {
     }
 
     public double calcularXp() {
-        return this.conteudosConcluidos
-                .stream()
-                .mapToDouble(conteudo -> conteudo.calculcarXp())
-                .sum();
+        return this.conteudosConcluidos.stream().mapToDouble(Conteudo::calculcarXp).sum();
     }
 
     public String getNome() {
